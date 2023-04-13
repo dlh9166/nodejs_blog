@@ -27,7 +27,12 @@ const handlebars = require('express-handlebars');
 // console.log('path::: ', path.join(__dirname, 'resource/views'));
 
 //template engine
-app.engine('hbs', handlebars.engine({ extname: '.hbs' }));
+app.engine(
+    'hbs',
+    handlebars.engine({
+        extname: '.hbs',
+    })
+);
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'resource/views'));
 
