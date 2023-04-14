@@ -4,8 +4,6 @@
   "description": "",
   "main": "src/index.js",
   "//": "\"beautiful\": \"prettier --single-quote --trailing-comma es5 --tab-width 4 --write \"src/**/*.{js,jsx,ts,tsx,json,scss}\"\",",
-
-
   "scripts": {
     "beautiful": "prettier --single-quote --trailing-comma es5 --tab-width 4 --write \"src/**/*.{js,jsx,ts,tsx,json,scss}\"",
     "beautiful1": "lint-staged",
@@ -32,7 +30,9 @@
   "homepage": "https://github.com/dlh9166/nodejs_blog#readme",
   "dependencies": {
     "express": "^4.18.2",
-    "express-handlebars": "^7.0.6"
+    "express-handlebars": "^7.0.6",
+    "mongodb": "^5.2.0",
+    "mongoose": "^7.0.3"
   },
   "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx,json,scss}": "prettier --single-quote --trailing-comma es5 --tab-width 4 --write"

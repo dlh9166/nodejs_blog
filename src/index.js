@@ -1,8 +1,14 @@
 const express = require('express');
 const app = express();
-const port = 3131;
+const port = process.env.port || 3131;
 const path = require('path');
 const route = require('./routes/index');
+
+//import db
+const db = require('./config/db/index');
+
+//connect to db
+db.connect();
 
 const morgan = require('morgan');
 //logo, file tĩnh thi no se vao public/...
@@ -18,6 +24,9 @@ app.use(express.json()); //dang gui tu js
 
 //handlebars
 const handlebars = require('express-handlebars');
+const { config } = require('process');
+const { index } = require('./app/controllers/NewsController');
+
 // import { engine } from 'express-handlebars';
 
 //httplogger
